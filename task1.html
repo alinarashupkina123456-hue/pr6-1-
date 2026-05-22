@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 1 - Кольори фону</title>
+    <style>
+        body { font-family: sans-serif; transition: background-color 0.3s; padding: 40px; }
+        .container { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 8px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Оберіть колір фону сторінки:</h2>
+        <!-- Замініть values та назви на кольори з вашого варіанту -->
+        <select id="colorSelect" onchange="changeBackground()">
+            <option value="#ffffff">Білий (Стандартний)</option>
+            <option value="#74b9ff">Синій (Pastel Blue)</option>
+            <option value="#55efc4">Зелений (Mint)</option>
+            <option value="#ffeaa7">Жовтий (Pastel Yellow)</option>
+        </select>
+    </div>
+
+    <script>
+        function changeBackground() {
+            const select = document.getElementById('colorSelect');
+            document.body.style.backgroundColor = select.value;
+        }
+    </script>
+</body>
+</html>
